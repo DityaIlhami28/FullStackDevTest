@@ -1,0 +1,10 @@
+[
+    {
+        "clientId": 2,
+        "roomId": 2,
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "bookingDate": "2021-04-13",
+        "quotaUsed": 5
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "roomName": "Conference Room",
+        "description": "For meetings with more than 10 people",
+        "imgUrl": "https://www.wework.com/ideas/wp-content/uploads/sites/4/2021/08/20201008-199WaterSt-2_v1-scaled.jpg",
+        "costPerHour": 5
+    },
+    {
+        "roomName": "Discussion Room",
+        "description": "Ideal for intimate group discussions, brainstorming sessions, and collaborative work.",
+        "imgUrl": "https://content-files.shure.com/OriginFiles/BlogPosts/best-layouts-for-conference-rooms/img1.png",
+        "costPerHour": 1
+    },
+    {
+        "roomName": "Event Space",
+        "description": "Spacious venue perfect for hosting events, workshops, seminars, and conferences.",
+        "imgUrl": "https://static1.squarespace.com/static/60da576b8b440e12699c9263/615a9615db7ff53972ab06f5/62b2a06228ace74cd926f595/1674459725228/ovation.jpg?format=1500w",
+        "costPerHour": 10
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "James Bond",
+        "email": "james.bond@email.com",
+        "password": "jamesbond007",
+        "phone": "+112345678",
+        "credits": 15
+    },
+    {
+        "name": "Wonder Woman",
+        "email": "wonder.women@email.com",
+        "password": "wonderwoman1984",
+        "phone": "+112345678",
+        "credits": 10
+    }
+]

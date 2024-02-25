@@ -35,8 +35,11 @@ export default function NavBar() {
         <div>
         <div className="navbar bg-black">
           <div className="flex-1">
-            <Link to="/">
               <button className="btn btn-ghost text-xl text-white">vOffice</button>
+          </div>
+          <div className="flex-1">
+            <Link to="/rooms">
+              <button className="btn btn-ghost text-xl text-white">Rooms Available</button>
             </Link>
           </div>
           <div className="flex-none">
@@ -54,7 +57,7 @@ export default function NavBar() {
                 <div className="card-body">
                   <span className="font-bold text-lg">{user.RoomUsages ? user.RoomUsages.length : 0} Bookings</span>
                   <div className="card-actions">
-                    <Link to="/bookings">
+                    <Link to="/my-bookings">
                       <button className="btn bg-black text-white">View Bookings</button>
                     </Link>
                   </div>

@@ -21,9 +21,9 @@ app.get("/", (req, res) => {
 
 app.post("/register", ClientController.register);
 app.post("/login", ClientController.login);
-app.get("/room", RoomController.getRooms);
 
 app.use(authentication);
+app.get("/room", RoomController.getRooms);
 app.get("/profile", ClientController.getProfile);
 app.patch("/credits", ClientController.addCredits);
 app.get("/roomUsage", RoomUsageController.getRoomUsage)

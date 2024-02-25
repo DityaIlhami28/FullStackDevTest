@@ -4,6 +4,7 @@ import HomePage from "./views/HomePage";
 import RoomPage from "./views/RoomPage";
 import LoginPage from "./views/LoginPage";
 import RegisterPage from "./views/RegisterPage";
+import MyBookings from "./views/MyBookings";
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +20,14 @@ export const router = createBrowserRouter([
     {
         path: "/rooms",
         element: <LayOut />,
+        loader: () => {
+            const isLogin = localStorage.getItem("access_token");
+            if (isLogin) {
+                return null;
+            } else {
+                return redirect("/login");
+            }
+        },
         children: [
             {
                 path: "/rooms",
@@ -41,5 +50,23 @@ export const router = createBrowserRouter([
     {
         path: "/register",
         element: <RegisterPage />,
+    },
+    {
+        path: "/my-bookings",
+        element: <LayOut />,
+        loader: () => {
+            const isLogin = localStorage.getItem("access_token");
+            if (isLogin) {
+                return null;
+            } else {
+                return redirect("/login");
+            }
+        },
+        children: [
+            {
+                path: "/my-bookings",
+                element: <MyBookings />
+            }
+        ]
     }
 ])

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "../helpers/axios";
+import Swal from "sweetalert2";
 
 export default function TopUpModal({ closeModal, onAddSuccess }) {
   const [form, setForm] = useState({
@@ -19,8 +20,12 @@ export default function TopUpModal({ closeModal, onAddSuccess }) {
       });
       onAddSuccess();
       closeModal();
+      Swal.fire("Success", "Credits added successfully", "success").then(
+        window.location.reload()
+      );
     } catch (error) {
       console.error(error);
+      Swal.fire("Error", "Something went wrong", "error");
     }   
   };
 

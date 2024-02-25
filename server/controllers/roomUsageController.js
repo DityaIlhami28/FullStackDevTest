@@ -9,7 +9,8 @@ class RoomUsageController {
           clientId: id,
         },
         include: {
-          model: Room, as: "Room",
+          model: Room,
+          as: "Room",
         },
       });
       res.status(200).json(booking);
@@ -25,6 +26,14 @@ class RoomUsageController {
       const client = await Client.findByPk(id);
       const room = await Room.findByPk(roomId);
       const parsedDate = new Date(bookingDate);
+      const currentDate = new Date();
+      
+      if (parsedDate < currentDate) {
+        throw {
+          name: "Invalid Date",
+          message: "Invalid Booking Date. Please choose a valid date",
+        };
+      }
       if (client.credits < room.costPerHour) {
         throw { name: "Insufficient Credits", message: "Insufficient Credits" };
       }
